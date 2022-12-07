@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final Jess</title>
+
+    <script src="https://kit.fontawesome.com/7003421962.js" crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="fancybox/jquery.fancybox.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <script type="text/javascript" src="jquery.tinycarousel.js"></script>
+
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="estilosPF.css" />
+    
+  </head>
+
+  <!--menu-->
+  <header class="ancho">
+
+    <div class="contenedor-logo">
+      <img src="imagenes/LOGO.png" alt="" />
+    </div>
+
+    <div class="contenedor-menu">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Pest Control</a>
+      <a href="#">Pricings</a>
+      <a href="#">Blogs</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div class="contenedor-audibar">
+      <i class="fa fa-bars" id="icono-menu"></i>
+      <a href="#"  class="btn-audifono">
+        <i class="fa fa-headphones" ></i>(+52)99-8844</a>
+
+    
+        <script>
+          $("#icono-menu").click(function () {
+            $("#menu").slideToggle();
+          });
+        </script>
+
+    </div>
+  </header>
+
+  <body>
+    
+  <!--menu desplegable-->
+  <nav id="menu" class="ancho desple">
+
+      <div class="icono-simple">
+        <img src="imagenes/logo-simple.png" alt="" />
+        <h1>Contact Information</h1>
+      </div>
+
+      <div class="iconosd">
+        <li>
+          <i class="fa fa-phone-volume"></i>
+          <h2>
+            +1(234)5678910
+          </h2>
+        </li>
+
+        <li>
+          <i class="fa fa-envelope"></i>
+          <h2>
+            jessica@gmail.com
+          </h2>
+        </li>
+
+        <li>
+          <i class="fa fa-map-pin"></i>
+          <h2>
+            Merida Yucatan
+          </h2>
+
+        </li>
+      </div>
+
+  </nav>
+
+  <!--S L I D E R-->
+  <div class="callbacks_container ancho">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="imagenes/slider-pest-1.jpg" alt="" />
+
+          <div class="info">
+            <h2>
+              Loking For Pest <br />
+              Control Service
+            </h2>
+            <p>There can be no pests where we enter</p>
+            <br />
+
+            <a href="leerMas.html" class="btn-slider">
+              Leer Más 
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slider-pest-2.jpg" alt="" />
+          <div class="info">
+            <h2>
+              Loking For Pest <br />
+              Control Service
+            </h2>
+            <p>There can be no pests where we enter</p>
+            <br />
+            <a href="leerMas.html" class="btn-slider">
+              Leer Más 
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </li>
+        <li>
+          <img src="imagenes/slider-pest-3.jpg" alt="" />
+          <div class="info">
+            <h2>
+              Loking For Pest <br />
+              Control Service
+            </h2>
+            <p>There can be no pests where we enter</p>
+            <br />
+            <a href="leerMas.html" class="btn-slider">
+              Leer Más 
+              <i class="fa fa-arrow-right"></i>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+       <!--SILDER SCRIPT-->
+    <script>
+      $(function () {
+        $("#slider4").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+  </div>
+
+  <!--FORMULARIO -->
+  <section class="contenedor-formulario ancho">
+      <h2>Make an appointment now, let us save you from the pests.</h2>
+      <form action="" method="post">
+        <input type="text" placeholder="Nombre" required>
+        <input type="tel" placeholder="Telefono " required>
+        <input type="text" placeholder="Problema " required>
+        <input type="date" >
+        <button type="submit"> 
+          Enviar <i class="fa fa-arrow-right"></i>
+        </button>
+      </form>
+
+      <i class="fa fa-handshake manos"></i>
+  </section>
+
+  <!--tarjetas volteadas-->
+  <div class="contenedor-total-servicios ancho">
+  <h2>Don't Miss the Discounts on Our Pest Control Service</h2>
+  <p>Select pricing plan to get more</p>
+  <section class="contenedor-control-servicios ancho">
+      <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="imagenes/ant-1.png" alt="Avatar" style="width:150px;height:150px;">
+              <div class="text-float">
+                  <h3>Ant Control</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, unde?</p>
+              </div>
+              
+            </div>
+            <div class="flip-card-back">
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perspiciatis.</h3> 
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="imagenes/mosquito1.png" alt="Avatar" style="width:150px;height:150px;">
+              <div class="text-float">
+                  <h3>Ant Control</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, unde?</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perspiciatis.</h3> 
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="imagenes/rat-1.png" alt="Avatar" style="width:150px;height:150px;">
+              <div class="text-float">
+                  <h3>Ant Control</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, unde?</p>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, perspiciatis.</h3> 
+              
+            </div>
+          </div>
+        </div>
+  </section>
+  </div>
+
+  <!--galeria FANCI BOX-->
+  <div class="contenedor-galeria ancho">
+  <h2>Common Pests Problems</h2>
+  <p>These pest species can invade habitats.</p>
+  <section id="galeria" class="ancho contenedorfotos">
+      <a href="imagenes/pest-1.png" class="fancybox" title="HORMIGA" rel="gallery1">
+        <img src="imagenes/pest-1.png" alt="" />
+      </a>
+      <a href="imagenes/pest-2.png" class="fancybox" title="ACARO" rel="gallery1">
+        <img src="imagenes/pest-2.png" alt="" />
+      </a>
+  
+      <a href="imagenes/pest-3.png" class="fancybox" title="ARAÑA" rel="gallery1">
+        <img src="imagenes/pest-3.png" alt="" />
+      </a>
+  
+      <a href="imagenes/pest-5.png" class="fancybox" title="MOSQUITO " rel="gallery1">
+        <img src="imagenes/pest-5.png" alt="" />
+      </a>
+  
+      <a href="imagenes/pest-6.png" class="fancybox" title="MOSCA" rel="gallery1">
+          <img src="imagenes/pest-6.png" alt="" />
+        </a>
+  
+      <a href="imagenes/pest-7.png" class="fancybox" title="CUCARACHA" rel="gallery1">
+          <img src="imagenes/pest-7.png" alt="" />
+        </a>
+  
+      <a href="imagenes/pest-8.png" class="fancybox" title="GARRAPATA" rel="gallery1">
+          <img src="imagenes/pest-8.png" alt="" />
+        </a>
+
+    </section>
+  </div>
+
+  <!--contenedor problemas-->
+  <section class="contenedor-problemas ancho" id="problemas">
+  <div class="problemas-imagen">
+      <img class="rotacion" src="imagenes/pest-circle14.png" alt="">
+      <img class="img-rotacion" src="imagenes/pest-about.png" alt="">
+  </div>
+  <div class="problemas-informacion">
+      <h2 class="wow animate__animated animate__backInRight ">We are always there for you for all your pest problems</h2>
+      <p class="wow animate__animated animate__backInRight animate__delay-1s">With our expert staff, we clean your home, workplace, flat, building and all areas from all pests at economical prices. If you are looking for a fast and reliable Pest Control service, contact us now. Let us save you from pests.</p>
+      <br>
+      <img src="imagenes/divider.jpg" alt="">
+      <br>
+      <div class="problemas1">
+        <i class="fa fa-spider"></i>
+          <div class="problemas-texto">
+              <h3>Quick Controll</h3>
+              <p>We save you from this hassle by visiting your place for your emergency pest control.</p>
+          </div>
+      </div>
+
+      <div class="problemas1">
+          <i class="fa fa-award"></i>
+          <div class="problemas-texto">
+              <h3>Pest Control</h3>
+              <p>Do not hesitate to call us for your pest problems, we are at your service 24/7.</p>
+          </div>
+      </div>
+
+      <a href="#problemas" class="btn-slider" id="Btn"> MODAL</a>
+
+  </div>
+  </section>
+
+  <!--Modal-->
+  <section id="modal" class="fondomodal">
+    <div class="contenidomodal">
+      <div class="estructuramodal">
+        <h3>Control de plagas</h3>
+          <i id="cerrarbtn" class="cerrarmodal fas fa-times-circle"></i>
+      </div>
+      
+      <p>
+        <img src="imagenes/logo-simple.png" alt="">
+          <br>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi placeat aut nobis ducimus provident, alias culpa, debitis odit numquam ullam labore cumque aspernatur voluptate temporibus quibusdam dolore rem. 
+            </p>
+      </p>
+    </div>
+
+    <!-- Modal SCRIPT-->
+    <script>
+      var fondomodal = document.getElementById("modal");
+      var btn = document.getElementById("Btn");
+      var cerrar = document.getElementById("cerrarbtn");
+
+      btn.onclick = function () {
+        fondomodal.style.display = "block";
+      };
+      cerrar.onclick = function () {
+        fondomodal.style.display = "none";
+      };
+      window.onclick = function (event) {
+        if (event.target == fondomodal) {
+          fondomodal.style.display = "none";
+        }
+      };
+    </script>        
+  </section>
+
+  <!--Equipo TYNY CAROUSEL-->
+  <div class="texto-equipo ancho wow animate__animated animate__backInRight">
+    <h2>What Are Our Customers Saying ?</h2>
+    <p>Opinions from our happy customers.</p>
+  </div>
+    <div id="slider1" class="ancho">
+		<a class="buttons prev" href="#"><i class="fa fa-angle-left"></i></a>
+		  <div class="viewport">
+			  <ul class="overview">
+				 <li>
+					<img src="imagenes/man1.png" />
+					<h2>Titulo 1</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam! ?</p>
+					<br>
+					
+					<br>
+				 </li>
+				 
+         <li>
+					<img src="imagenes/man2.png" />
+					<h2>Titulo 2</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam! </p>
+					<br>
+					
+					<br>
+				 
+         </li>
+				 
+         <li>
+					<img src="imagenes/testimonial2-1.png" />
+					<h2>Titulo 3</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam!</p>
+					<br>
+					
+					<br>
+				 </li>
+				
+         <li>
+					<img src="imagenes/testimonial4-1.png" />
+					<h2>Titulo 4</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam! </p>
+					<br>
+					
+					<br>
+				 </li>
+				
+         <li>
+					<img src="imagenes/man1.png" />
+					<h2>Titulo 5</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam! </p>
+					<br>
+				
+					<br>
+				 </li>
+				
+         <li>
+					<img src="imagenes/testimonial2-1.png" />
+					<h2>Titulo 6</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic adipisci quaerat veniam! </p>
+					<br>
+					
+					<br>
+				 </li>
+			   </ul>
+		   </div>
+		<a class="buttons next" href="#"><i class="fa fa-angle-right"></i></a>
+
+    <!--SCRIPT TYNY-->
+
+    <script type="text/javascript">
+      $(document).ready(function()
+      {
+          $('#slider1').tinycarousel();
+      });
+  </script>
+
+	  </div>
+
+
+<!--FOOTER-->
+    <footer class="ancho">
+      <article class="parte1">
+            <img src="imagenes/LogoFotter.png" alt="">
+            <a href="#"> <i class="fa fa-bars"> </i>New Jersey, USA</a>
+            <a href="#"> <i class="fa fa-phone"></i> +1 (999) 567 57457</a>
+            <a href="#"><i class="fa fa-envelope"></i>jessica@gmail.com</a>
+            <div class="redes">
+                <i	class="fa	fa-facebook-f"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+      </article>
+        
+      <article class="parte2">
+            <h3>Join Our Newsletter</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <form action="">
+                <input type="text" placeholder="Email Andress" required>
+                <button type="submit">suscribete </button>
+            </form>
+      </article>
+        
+      <article class="parte3">
+            <h3>Service</h3>
+            <ul>
+                <li>Ants Control</li>
+                <li>Termites Control</li>
+                <li>Spider Control</li>
+                <li>Rodents Control</li>
+                <li>Mosquitos Control</li>
+            </ul>
+      </article>
+        
+      <article class="parte4">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Pest Control</li>
+                <li>Pricing</li>
+                <li>Contact</li>
+            </ul>
+      </article>
+    </footer>
+
+    
+    <!--A N I M A C I O N E S SCRIPT-->
+      	
+           <script>
+            new WOW().init();
+          </script>
+
+  </body>
+</html>
